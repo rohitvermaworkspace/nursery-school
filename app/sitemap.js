@@ -1,5 +1,7 @@
 import { SITE } from '@/lib/seo'
 
+export const dynamic = 'force-static'
+
 export default function sitemap() {
   const routes = ['', '/about', '/programs', '/classes', '/gallery', '/blog', '/contact']
 

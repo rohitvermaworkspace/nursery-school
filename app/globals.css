@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Primary Palette ---- */
+  --color-purple: #7B3FE4;
+  --color-purple-deep: #6A2FCC;
+  --color-purple-light: #9B5DE5;
+  --color-orange: #FF8A00;
+  --color-orange-deep: #E67A00;
+  --color-yellow: #FFC928;
+  --color-yellow-deep: #E6B524;
+  --color-green: #65B82E;
+  --color-green-deep: #4C9A24;
+  --color-blue: #2F91D9;
+  --color-blue-deep: #2880C4;
+  --color-pink: #F45B8A;
+  --color-pink-deep: #E04575;
+  --color-teal: #3BBAA5;
+
+  /* ---- Background Tints ---- */
+  --color-cream: #FFF8E7;
+  --color-lavender: #F3EDFF;
+  --color-sky: #EEF8FF;
+  --color-mint: #EFF9E7;
+  --color-light-orange: #FFF1E2;
+
+  /* ---- Text ---- */
+  --color-ink: #172554;
+  --color-body: #64748B;
+
+  /* ---- Fonts ---- */
+  --font-display: var(--font-baloo2), sans-serif;
+  --font-body: var(--font-nunito), sans-serif;
+
+  /* ---- Design Tokens ---- */
+  --radius-card: 24px;
+  --radius-image: 18px;
+  --radius-button: 9999px;
+  --radius-input: 14px;
+  --container-max: 1280px;
+
+  /* ---- Shadows ---- */
+  --shadow-card: 0 4px 24px rgba(123, 63, 228, 0.08);
+  --shadow-card-hover: 0 8px 32px rgba(123, 63, 228, 0.14);
+  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-button: 0 4px 0 0 var(--color-purple-deep);
+  --shadow-button-orange: 0 4px 0 0 var(--color-orange-deep);
+  --shadow-button-green: 0 4px 0 0 var(--color-green-deep);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #ffffff;
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  *:focus-visible {
+    outline: 3px solid var(--color-purple);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* ---- Animations ---- */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes float-x {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float-y { animation: float-y 4.5s ease-in-out infinite; }
+.animate-float-x { animation: float-x 5s ease-in-out infinite; }
+.animate-wiggle { animation: wiggle 2.6s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 16s linear infinite; }
+.animate-pulse-soft { animation: pulse-soft 3s ease-in-out infinite; }
+.animate-fade-in-up { animation: fade-in-up 0.6s ease-out both; }
+.animate-bounce-gentle { animation: bounce-gentle 2s ease-in-out infinite; }
+
+/* Stagger delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-1000 { animation-delay: 1s; }
+
+/* ---- Decorative wavy section dividers ---- */
+.wave-top {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

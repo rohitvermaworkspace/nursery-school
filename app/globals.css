@@ -51,6 +51,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    overscroll-behavior: contain;
   }
   body {
     background-color: #ffffff;
@@ -58,6 +60,7 @@
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
   *:focus-visible {
     outline: 3px solid var(--color-purple);

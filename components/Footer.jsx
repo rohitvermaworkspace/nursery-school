@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Phone, Mail, MapPin, Sparkles, Clock, Heart } from 'lucide-react'
+import { Sparkles, Heart } from 'lucide-react'
 import { SITE } from '@/lib/seo'
 import { footerPrograms, footerQuickLinks } from '@/data/content'
 import { GrassDivider, DoodleFlower, DoodleTree, DoodleTeddy, DoodleTrain, DoodleBalloon, DoodleCloud, DoodleButterfly, DoodleStar } from '@/components/Doodles'
@@ -87,24 +87,24 @@ export default function Footer() {
         </div>
 
         {/* Main footer content */}
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-10 pb-10 relative z-10">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 text-white">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-6 pb-6 sm:pt-10 sm:pb-10 relative z-10">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6 sm:gap-10 text-white">
             {/* Brand */}
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <span className="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-yellow" />
+            <div className="col-span-2">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="w-10 h-10 rounded-2xl bg-white/15 flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-yellow" />
                 </span>
                 <div className="leading-none">
-                  <p className="font-display font-extrabold text-lg">{SITE.shortName}</p>
-                  <p className="text-[11px] text-white/70 mt-0.5">{SITE.tagline}</p>
+                  <p className="font-display font-extrabold text-base">{SITE.shortName}</p>
+                  <p className="text-[10px] text-white/70 mt-0.5">{SITE.tagline}</p>
                 </div>
               </div>
-              <p className="text-sm text-white/70 leading-relaxed mb-5">
+              <p className="text-xs text-white/70 leading-relaxed mb-4">
                 Nurturing young minds in a safe, fun, and stimulating environment where every child
                 can thrive and reach their full potential.
               </p>
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2">
                 {SOCIAL_LINKS.map(({ href, label, Icon }) => (
                   <a
                     key={label}
@@ -114,7 +114,7 @@ export default function Footer() {
                     aria-label={label}
                     className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center hover:bg-white/25 transition-all hover:scale-105"
                   >
-                    <Icon className="w-4.5 h-4.5" />
+                    <Icon className="w-4 h-4" />
                   </a>
                 ))}
               </div>
@@ -122,15 +122,15 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-display font-bold text-lg mb-4 relative">
+              <h4 className="font-display font-bold text-sm mb-2 relative">
                 Quick Links
-                <span className="block w-8 h-1 bg-yellow rounded-full mt-2" />
+                <span className="block w-6 h-0.5 bg-yellow rounded-full mt-1.5" />
               </h4>
-              <ul className="space-y-2.5 text-sm text-white/80">
+              <ul className="space-y-1.5 text-xs text-white/80">
                 {footerQuickLinks.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="hover:text-yellow transition-colors inline-flex items-center gap-2 group">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white/40 group-hover:bg-yellow transition-colors" />
+                    <Link href={link.href} className="hover:text-yellow transition-colors inline-flex items-center gap-1.5 group py-1">
+                      <span className="w-1 h-1 rounded-full bg-white/40 group-hover:bg-yellow transition-colors" />
                       {link.label}
                     </Link>
                   </li>
@@ -140,68 +140,31 @@ export default function Footer() {
 
             {/* Programs */}
             <div>
-              <h4 className="font-display font-bold text-lg mb-4 relative">
-                Our Programs
-                <span className="block w-8 h-1 bg-yellow rounded-full mt-2" />
+              <h4 className="font-display font-bold text-sm mb-2 relative">
+                Programs
+                <span className="block w-6 h-0.5 bg-yellow rounded-full mt-1.5" />
               </h4>
-              <ul className="space-y-2.5 text-sm text-white/80">
+              <ul className="space-y-1.5 text-xs text-white/80">
                 {footerPrograms.map((label) => (
                   <li key={label}>
-                    <Link href="/programs" className="hover:text-yellow transition-colors inline-flex items-center gap-2 group">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white/40 group-hover:bg-yellow transition-colors" />
+                    <Link href="/programs" className="hover:text-yellow transition-colors inline-flex items-center gap-1.5 group py-1">
+                      <span className="w-1 h-1 rounded-full bg-white/40 group-hover:bg-yellow transition-colors" />
                       {label}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
-
-            {/* Contact */}
-            <div>
-              <h4 className="font-display font-bold text-lg mb-4 relative">
-                Contact Us
-                <span className="block w-8 h-1 bg-yellow rounded-full mt-2" />
-              </h4>
-              <ul className="space-y-3 text-sm text-white/80">
-                <li className="flex items-center gap-3">
-                  <span className="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
-                    <Phone className="w-4 h-4" />
-                  </span>
-                  {SITE.phoneDisplay}
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
-                    <Mail className="w-4 h-4" />
-                  </span>
-                  {SITE.email}
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center shrink-0 mt-0.5">
-                    <MapPin className="w-4 h-4" />
-                  </span>
-                  <span>
-                    {SITE.address.street},<br />
-                    {SITE.address.city}, {SITE.address.region} {SITE.address.postalCode}
-                  </span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
-                    <Clock className="w-4 h-4" />
-                  </span>
-                  Mon – Fri: 7 AM – 6 PM
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
 
         {/* Decorative landscape bottom — teddy left, train right */}
-        <div className="relative h-28 sm:h-32 pointer-events-none">
+        <div className="relative h-16 sm:h-24 pointer-events-none">
           {/* Teddy bear — bottom left */}
-          <DoodleTeddy className="w-20 h-24 sm:w-24 sm:h-28 absolute left-[6%] sm:left-[10%] bottom-0" />
+          <DoodleTeddy className="w-14 h-18 sm:w-20 sm:h-24 absolute left-[6%] sm:left-[10%] bottom-0" />
 
           {/* Train — bottom right */}
-          <DoodleTrain className="w-28 h-16 sm:w-36 sm:h-20 absolute right-[4%] sm:right-[8%] bottom-2" />
+          <DoodleTrain className="w-20 h-12 sm:w-28 sm:h-16 absolute right-[4%] sm:right-[8%] bottom-2" />
 
           {/* Extra flowers around corners */}
           <DoodleFlower className="w-6 h-8 absolute left-[28%] bottom-2 opacity-40" />

@@ -5,7 +5,10 @@ import { DoodleButterfly, DoodleTree, DoodleHeart, DoodleCloud, DoodleFlower } f
 export default function GalleryStrip() {
   return (
     <section className="bg-sky relative overflow-hidden py-20 sm:py-24">
-      {/* Decorative elements */}
+      
+
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+        {/* Decorative elements */}
       <DoodleButterfly className="w-14 h-10 absolute left-8 top-12 hidden sm:block animate-float-y" />
       <DoodleButterfly className="w-12 h-9 absolute right-12 top-16 hidden sm:block animate-float-y delay-700" />
       <DoodleTree className="w-16 h-18 absolute left-4 bottom-4 hidden lg:block" />
@@ -14,9 +17,6 @@ export default function GalleryStrip() {
       <DoodleCloud className="w-18 h-12 absolute left-[15%] top-20 hidden lg:block opacity-30 animate-float-x delay-500" />
       <DoodleFlower className="w-8 h-10 absolute left-[20%] bottom-8 hidden lg:block" />
       <DoodleFlower className="w-7 h-9 absolute right-[22%] bottom-12 hidden lg:block delay-300" />
-
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-
         <div className="text-center mb-12">
           <span className="inline-flex items-center gap-2 bg-blue/10 text-blue font-display font-semibold text-sm px-4 py-2 rounded-full mb-4">
             <DoodleHeart className="w-4 h-4" />

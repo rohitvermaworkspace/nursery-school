@@ -7,7 +7,7 @@ import { DoodleFlower, DoodleStar } from '@/components/Doodles'
 export default function WelcomeNews() {
   return (
     <section className="bg-white pb-20 sm:pb-24">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 lg:gap-16">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-16">
         {/* Welcome */}
         <div className="relative">
           <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-ink flex items-center gap-3 mb-6">
@@ -59,7 +59,7 @@ export default function WelcomeNews() {
             {newsPosts.map((post) => (
               <article
                 key={post.id}
-                className="flex gap-5 bg-cream/80 rounded-[1.5rem] p-4 sm:p-5 items-center border border-yellow/10 hover:shadow-card transition-shadow duration-300"
+                className="flex gap-5 bg-cream/80 rounded-[1.5rem] p-4 sm:p-5 items-center border border-yellow/10 hover:shadow-card active:scale-[0.98] transition-all duration-300"
               >
                 <div className="relative w-32 h-28 sm:w-36 sm:h-32 rounded-2xl overflow-hidden shrink-0 border-2 border-white shadow-soft">
                   <Image
@@ -75,7 +75,7 @@ export default function WelcomeNews() {
                     <span className="w-1.5 h-1.5 rounded-full bg-purple" />
                     {post.date}
                   </div>
-                  <h3 className="font-display font-bold text-ink text-[15px] mb-1.5">{post.title}</h3>
+                  <h3 className="font-display font-bold text-ink text-[15px] mb-1.5 line-clamp-2">{post.title}</h3>
                   <p className="text-sm text-body leading-snug">{post.excerpt}</p>
                   <Link
                     href="/blog"

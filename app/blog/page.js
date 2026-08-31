@@ -36,7 +36,7 @@ export default function BlogPage() {
       <section className="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (
-            <article key={post.id} className="bg-white rounded-[1.5rem] overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 border border-ink/5 group">
+            <article key={post.id} className="bg-white rounded-[1.5rem] overflow-hidden shadow-card hover:shadow-card-hover active:scale-[0.98] transition-all duration-300 hover:-translate-y-1.5 border border-ink/5 group">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={post.image}
@@ -51,7 +51,7 @@ export default function BlogPage() {
                   <Calendar className="w-3.5 h-3.5" />
                   {post.date}
                 </div>
-                <h2 className="font-display font-bold text-lg text-ink mb-2 leading-snug">
+                <h2 className="font-display font-bold text-lg text-ink mb-2 leading-snug line-clamp-2">
                   {post.title}
                 </h2>
                 <p className="text-sm text-body leading-relaxed mb-5">{post.excerpt}</p>

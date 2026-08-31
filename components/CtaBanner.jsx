@@ -27,7 +27,7 @@ export default function CtaBanner() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2.5 bg-orange text-white font-display font-semibold px-7 py-3.5 rounded-full hover:bg-orange-deep transition-all shrink-0 shadow-[0_4px_0_0_var(--color-orange-deep)] hover:translate-y-[2px] hover:shadow-[0_2px_0_0_var(--color-orange-deep)] active:translate-y-[4px] active:shadow-none relative z-10"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-orange text-white font-display font-semibold px-7 py-3.5 rounded-full hover:bg-orange-deep transition-all shrink-0 shadow-[0_4px_0_0_var(--color-orange-deep)] hover:translate-y-[2px] hover:shadow-[0_2px_0_0_var(--color-orange-deep)] active:translate-y-[4px] active:shadow-none relative z-10"
           >
             Contact Us Today!
             <Phone className="w-4 h-4" />

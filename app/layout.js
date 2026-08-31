@@ -2,6 +2,7 @@ import { Baloo_2, Nunito } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BottomNav from "@/components/BottomNav";
 import { SITE, buildMetadata, organizationJsonLd } from "@/lib/seo";
 
 const baloo2 = Baloo_2({
@@ -28,7 +29,20 @@ export const metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: SITE.name,
+  },
 };
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
+export const themeColor = "#7B3FE4";
 
 export default function RootLayout({ children }) {
   const jsonLd = organizationJsonLd();
@@ -41,8 +55,9 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pb-[72px] md:pb-0">{children}</main>
         <Footer />
+        <BottomNav />
       </body>
     </html>
   );

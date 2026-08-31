@@ -11,9 +11,12 @@ const BADGES = [
 
 export default function Hero() {
   return (
-    <section className="bg-lavender relative overflow-hidden">
+    <section className="bg-lavender relative">
       {/* Decorative elements */}
-      <DoodleCloud className="w-28 h-18 absolute left-[5%] top-8 hidden sm:block opacity-60 animate-float-x" />
+      
+
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-24 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative">
+        <DoodleCloud className="w-28 h-18 absolute left-[5%] top-8 hidden sm:block opacity-60 animate-float-x" />
       <DoodleCloud className="w-20 h-13 absolute right-[15%] top-14 hidden lg:block opacity-40 animate-float-x delay-500" />
       <DoodleRainbow className="w-28 h-18 absolute left-2 -top-2 hidden sm:block" />
       <DoodleSun className="w-14 h-14 absolute right-24 top-8 hidden sm:block animate-spin-slow" />
@@ -23,15 +26,13 @@ export default function Hero() {
       <DoodleBalloon className="w-7 h-10 absolute right-[8%] bottom-32 hidden lg:block animate-bounce-gentle delay-700" color="var(--color-yellow)" />
       <DoodleHeart className="w-5 h-5 absolute right-[20%] top-40 hidden lg:block animate-pulse-soft delay-200" />
       <DoodleStar className="w-5 h-5 absolute left-[30%] bottom-16 hidden lg:block animate-wiggle delay-300" color="var(--color-orange)" />
-
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-24 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative">
         <div className="relative z-10">
           <div className="inline-flex items-center gap-2 bg-purple/10 text-purple font-display font-semibold text-sm px-4 py-2 rounded-full mb-6">
             <span className="w-2 h-2 rounded-full bg-purple animate-pulse" />
             Welcome to LittleSprouts
           </div>
 
-          <h1 className="font-display font-extrabold text-[2.5rem] sm:text-5xl lg:text-[3.4rem] leading-[1.1] text-ink tracking-tight">
+          <h1 className="font-display font-extrabold text-[1.75rem] sm:text-[2.5rem] lg:text-[3.4rem] leading-[1.1] text-ink tracking-tight">
             Nurturing young minds for a{' '}
             <span className="text-purple">brighter</span>{' '}
             <span className="text-orange">tomorrow</span>
@@ -42,17 +43,17 @@ export default function Hero() {
             We make learning an exciting adventure!
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-row items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2.5 bg-purple text-white font-display font-semibold px-8 py-4 rounded-full hover:bg-purple-deep transition-all shadow-[0_5px_0_0_var(--color-purple-deep)] hover:translate-y-[2px] hover:shadow-[0_3px_0_0_var(--color-purple-deep)] active:translate-y-[5px] active:shadow-none text-[15px]"
+              className="inline-flex items-center justify-center gap-2.5 bg-purple text-white font-display font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full hover:bg-purple-deep transition-all shadow-[0_5px_0_0_var(--color-purple-deep)] hover:translate-y-[2px] hover:shadow-[0_3px_0_0_var(--color-purple-deep)] active:translate-y-[5px] active:shadow-none text-sm sm:text-[15px]"
             >
               Join Us Today!
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 bg-white text-ink font-display font-semibold px-7 py-4 rounded-full border-2 border-ink/10 hover:border-purple/30 hover:text-purple transition-all text-[15px]"
+              className="inline-flex items-center justify-center gap-2 bg-white text-ink font-display font-semibold px-5 sm:px-7 py-3.5 sm:py-4 rounded-full border-2 border-ink/10 hover:border-purple/30 hover:text-purple transition-all text-sm sm:text-[15px]"
             >
               Learn More
             </Link>

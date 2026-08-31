@@ -20,7 +20,7 @@ export default function ProgramCards() {
           {programs.map((program) => (
             <article
               key={program.id}
-              className="rounded-[1.75rem] p-5 flex flex-col text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-card-hover shadow-card group"
+              className="rounded-[1.75rem] p-5 flex flex-col text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-card-hover shadow-card active:scale-[0.97] group"
               style={{ backgroundColor: program.color }}
             >
               <h3 className="font-display font-bold text-lg text-center">{program.title}</h3>

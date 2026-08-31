@@ -28,7 +28,7 @@ export default function ProgramsPage() {
         subtitle="Age-appropriate programs that grow with your child, from first days away from home through kindergarten readiness."
       />
 
-      <section className="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24 flex flex-col gap-20">
+      <section className="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24 flex flex-col gap-12 sm:gap-20">
         {list.map((program, i) => (
           <div
             key={program.id}

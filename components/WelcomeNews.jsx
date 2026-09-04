@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import AppImage from '@/components/AppImage'
 import Link from 'next/link'
 import { ArrowRight, Sun } from 'lucide-react'
 import { newsPosts } from '@/data/content'
@@ -17,7 +17,7 @@ export default function WelcomeNews() {
           </h2>
 
           <div className="rounded-[1.75rem] overflow-hidden aspect-[16/10] relative mb-6 shadow-[0_4px_24px_rgba(0,0,0,0.08)] border-3 border-white">
-            <Image
+            <AppImage
               src="/images/kids-painting.jpg"
               alt="Children sitting together on a colorful classroom rug"
               fill
@@ -62,7 +62,7 @@ export default function WelcomeNews() {
                 className="flex gap-5 bg-cream/80 rounded-[1.5rem] p-4 sm:p-5 items-center border border-yellow/10 hover:shadow-card active:scale-[0.98] transition-all duration-300"
               >
                 <div className="relative w-32 h-28 sm:w-36 sm:h-32 rounded-2xl overflow-hidden shrink-0 border-2 border-white shadow-soft">
-                  <Image
+<AppImage
                     src={post.image}
                     alt={post.title}
                     fill

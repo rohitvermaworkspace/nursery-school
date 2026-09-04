@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import AppImage from '@/components/AppImage'
 import { galleryImages } from '@/data/content'
 import { DoodleButterfly, DoodleTree, DoodleHeart, DoodleCloud, DoodleFlower } from '@/components/Doodles'
 
@@ -33,7 +33,7 @@ export default function GalleryStrip() {
               key={i}
               className="relative aspect-square rounded-2xl overflow-hidden shadow-soft border-3 border-white hover:shadow-card transition-shadow duration-300 group"
             >
-              <Image
+              <AppImage
                 src={src}
                 alt={`Photo from LittleSprouts Kindergarten activities, ${i + 1}`}
                 fill

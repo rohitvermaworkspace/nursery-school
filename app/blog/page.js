@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import AppImage from '@/components/AppImage'
 import { Calendar } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
 import { newsPosts } from '@/data/content'
@@ -37,7 +37,7 @@ export default function BlogPage() {
           {posts.map((post) => (
             <article key={post.id} className="bg-white rounded-[1.5rem] overflow-hidden shadow-card hover:shadow-card-hover active:scale-[0.98] transition-all duration-300 hover:-translate-y-1.5 border border-ink/5 group">
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
+                <AppImage
                   src={post.image}
                   alt={post.title}
                   fill

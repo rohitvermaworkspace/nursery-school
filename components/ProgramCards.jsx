@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import AppImage from '@/components/AppImage'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { programs } from '@/data/content'
@@ -29,7 +29,7 @@ export default function ProgramCards() {
               </p>
 
               <div className="relative rounded-2xl overflow-hidden aspect-square mb-4 border-2 border-white/20">
-                <Image
+                <AppImage
                   src={program.image}
                   alt={`${program.title} at LittleSprouts Kindergarten`}
                   fill

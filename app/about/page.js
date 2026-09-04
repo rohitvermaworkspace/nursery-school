@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import AppImage from '@/components/AppImage'
 import { ShieldCheck, Heart, Sprout, Users, Check } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
 import { buildMetadata } from '@/lib/seo'
@@ -36,7 +36,7 @@ export default function AboutPage() {
         <div className="relative">
           <div className="absolute -inset-3 bg-purple/5 rounded-[2.5rem] rotate-2" />
           <div className="rounded-[2rem] overflow-hidden aspect-[4/3.2] relative shadow-[0_4px_24px_rgba(0,0,0,0.08)] border-4 border-white">
-            <Image
+            <AppImage
               src="/images/about-kindergarten.jpg"
               alt="Children drawing and learning together in a colorful classroom"
               fill

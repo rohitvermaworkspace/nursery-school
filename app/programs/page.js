@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import AppImage from '@/components/AppImage'
 import { Check } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
 import { programs } from '@/data/content'
@@ -40,7 +40,7 @@ export default function ProgramsPage() {
             <div className="relative">
               <div className="absolute -inset-3 rounded-[2.5rem] rotate-2" style={{ backgroundColor: `color-mix(in srgb, ${program.color} 8%, transparent)` }} />
               <div className="rounded-[2rem] overflow-hidden aspect-[4/3.2] relative shadow-[0_4px_24px_rgba(0,0,0,0.08)] border-4 border-white">
-                <Image
+                <AppImage
                   src={program.image}
                   alt={`${program.title} classroom at LittleSprouts Kindergarten`}
                   fill

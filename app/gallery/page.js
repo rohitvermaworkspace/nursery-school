@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import AppImage from '@/components/AppImage'
 import PageHeader from '@/components/PageHeader'
 import { galleryImages } from '@/data/content'
 import { buildMetadata } from '@/lib/seo'
@@ -28,7 +28,7 @@ export default function GalleryPage() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 relative z-10">
           {ALL_IMAGES.map((src, i) => (
             <div key={i} className="relative aspect-square rounded-2xl overflow-hidden shadow-soft border-3 border-white group hover:shadow-card transition-all duration-300">
-              <Image
+              <AppImage
                 src={src}
                 alt={`LittleSprouts Kindergarten gallery photo ${i + 1}`}
                 fill

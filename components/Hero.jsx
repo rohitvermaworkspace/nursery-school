@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import AppImage from '@/components/AppImage'
 import Link from 'next/link'
 import { ArrowRight, ShieldCheck, Heart, Sprout } from 'lucide-react'
 import { DoodleRainbow, DoodleSun, DoodleStar, DoodlePaperPlane, DoodleCloud, DoodleBalloon, DoodleHeart } from '@/components/Doodles'
@@ -77,7 +77,7 @@ export default function Hero() {
           <div className="absolute -inset-4 bg-yellow/10 rounded-[3rem] -rotate-2" />
 
           <div className="rounded-[2rem] overflow-hidden aspect-[4/3.3] relative shadow-[0_8px_40px_rgba(123,63,228,0.12)] border-4 border-white">
-            <Image
+            <AppImage
               src="/images/teacher-helping.jpg"
               alt="A teacher helping two young children build with colorful blocks"
               fill

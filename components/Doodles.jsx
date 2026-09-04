@@ -95,11 +95,54 @@ export function DoodleTree({ className = '' }) {
 
 export function GrassDivider({ className = '' }) {
   return (
-    <svg viewBox="0 0 1200 36" preserveAspectRatio="none" className={className} aria-hidden="true">
+    <svg viewBox="0 0 1200 52" preserveAspectRatio="none" className={className} aria-hidden="true">
+      {/* Lighter back grass layer */}
       <path
-        d="M0 18c40 16 80 16 120 0s80-16 120 0 80 16 120 0 80-16 120 0 80 16 120 0 80-16 120 0 80 16 120 0 80-16 120 0 80 16 120 0V36H0V18Z"
+        d="M0 30c25 10 50 10 75 0s50-10 75 0 50 10 75 0 50-10 75 0 50 10 75 0 50-10 75 0 50 10 75 0 50-10 75 0 50 10 75 0 50-10 75 0 50 10 75 0 50-10 75 0V52H0V30Z"
+        fill="var(--color-green)"
+        opacity="0.5"
+      />
+      {/* Main grass wave */}
+      <path
+        d="M0 24c30 14 60 14 90 0s60-14 90 0 60 14 90 0 60-14 90 0 60 14 90 0 60-14 90 0 60 14 90 0 60-14 90 0 60 14 90 0 60-14 90 0 60 14 90 0 60-14 90 0V52H0V24Z"
         fill="var(--color-green-deep)"
       />
+      {/* Grass blade silhouettes — varied heights */}
+      <g fill="var(--color-green-deep)" opacity="0.9">
+        <path d="M18 26 Q20 8 22 26" />
+        <path d="M42 28 Q44 14 46 28" />
+        <path d="M68 25 Q71 5 74 25" />
+        <path d="M95 27 Q97 10 99 27" />
+        <path d="M122 26 Q124 7 126 26" />
+        <path d="M150 28 Q152 12 154 28" />
+        <path d="M178 25 Q181 4 184 25" />
+        <path d="M208 27 Q210 9 212 27" />
+        <path d="M238 26 Q240 6 242 26" />
+        <path d="M268 28 Q270 11 272 28" />
+        <path d="M298 25 Q301 5 304 25" />
+        <path d="M330 27 Q332 8 334 27" />
+        <path d="M362 26 Q364 7 366 26" />
+        <path d="M395 28 Q397 13 399 28" />
+        <path d="M428 25 Q431 4 434 25" />
+        <path d="M462 27 Q464 9 466 27" />
+        <path d="M498 26 Q500 6 502 26" />
+        <path d="M535 28 Q537 11 539 28" />
+        <path d="M572 25 Q575 5 578 25" />
+        <path d="M610 27 Q612 8 614 27" />
+        <path d="M648 26 Q650 7 652 26" />
+        <path d="M688 28 Q690 12 692 28" />
+        <path d="M728 25 Q731 4 734 25" />
+        <path d="M768 27 Q770 9 772 27" />
+        <path d="M810 26 Q812 6 814 26" />
+        <path d="M852 28 Q854 11 856 28" />
+        <path d="M895 25 Q898 5 901 25" />
+        <path d="M938 27 Q940 8 942 27" />
+        <path d="M982 26 Q984 7 986 26" />
+        <path d="M1028 28 Q1030 13 1032 28" />
+        <path d="M1075 25 Q1078 4 1081 25" />
+        <path d="M1122 27 Q1124 9 1126 27" />
+        <path d="M1170 26 Q1172 6 1174 26" />
+      </g>
     </svg>
   )
 }

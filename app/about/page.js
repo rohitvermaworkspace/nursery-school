@@ -37,7 +37,7 @@ export default function AboutPage() {
           <div className="absolute -inset-3 bg-purple/5 rounded-[2.5rem] rotate-2" />
           <div className="rounded-[2rem] overflow-hidden aspect-[4/3.2] relative shadow-[0_4px_24px_rgba(0,0,0,0.08)] border-4 border-white">
             <Image
-              src="https://images.unsplash.com/photo-1567057419565-4349c49d8a04?q=80&w=900&auto=format&fit=crop"
+              src="/images/about-kindergarten.jpg"
               alt="Children drawing and learning together in a colorful classroom"
               fill
               sizes="(min-width: 1024px) 520px, 100vw"

@@ -18,7 +18,7 @@ export const programs = [
     color: 'var(--color-purple)',
     colorDeep: 'var(--color-purple-deep)',
     image:
-      'https://images.unsplash.com/photo-1544776193-352d25ca82cd?q=80&w=600&auto=format&fit=crop',
+      '/images/kids-painting.jpg',
     desc: 'We provide a safe, fun and stimulating environment where children love to learn and grow.',
     href: '/about',
   },
@@ -29,7 +29,7 @@ export const programs = [
     color: 'var(--color-orange)',
     colorDeep: 'var(--color-orange-deep)',
     image:
-      'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=600&auto=format&fit=crop',
+      '/images/kids-playing.jpg',
     desc: 'Fun-filled activities to build confidence, creativity and social skills.',
     href: '/programs#play-school',
   },
@@ -40,7 +40,7 @@ export const programs = [
     color: 'var(--color-green)',
     colorDeep: 'var(--color-green-deep)',
     image:
-      'https://images.unsplash.com/photo-1526634332515-d56c5fd16991?q=80&w=600&auto=format&fit=crop',
+      '/images/kids-learning.jpg',
     desc: 'Hands-on learning that prepares your child for kindergarten and beyond.',
     href: '/programs#pre-k',
   },
@@ -51,7 +51,7 @@ export const programs = [
     color: 'var(--color-blue)',
     colorDeep: 'var(--color-blue-deep)',
     image:
-      'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=600&auto=format&fit=crop',
+      '/images/child-painting.jpg',
     desc: 'A strong foundation in academics with a focus on holistic development.',
     href: '/programs#kindergarten',
   },
@@ -64,7 +64,7 @@ export const newsPosts = [
     title: 'Summer Camp 2026',
     excerpt: 'Exciting activities, outdoor fun & creative workshops for kids.',
     image:
-      'https://images.unsplash.com/photo-1472162072942-cd5147eb3902?q=80&w=600&auto=format&fit=crop',
+      '/images/kids-outdoors.jpg',
   },
   {
     id: 'parent-workshop',
@@ -72,17 +72,17 @@ export const newsPosts = [
     title: 'Parent Workshop',
     excerpt: 'Join our upcoming workshop on positive parenting & child growth.',
     image:
-      'https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=600&auto=format&fit=crop',
+      '/images/parent-workshop.jpg',
   },
 ]
 
 export const galleryImages = [
-  'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=500&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1607453998774-d533f65dac99?q=80&w=500&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1560785496-3c9d27877182?q=80&w=500&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=500&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1526634332515-d56c5fd16991?q=80&w=500&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1544776193-352d25ca82cd?q=80&w=500&auto=format&fit=crop',
+  '/images/kids-playing.jpg',
+  '/images/playground.jpg',
+  '/images/teacher-helping.jpg',
+  '/images/child-painting.jpg',
+  '/images/kids-learning.jpg',
+  '/images/kids-painting.jpg',
 ]
 
 export const footerPrograms = ['Play School', 'Pre-K Program', 'Kindergarten', 'After School Care', 'Summer Camp']

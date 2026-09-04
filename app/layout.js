@@ -27,7 +27,11 @@ export const metadata = {
   }),
   metadataBase: new URL(SITE.url),
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
   appleWebApp: {
     capable: true,
@@ -50,12 +54,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`h-full antialiased ${baloo2.variable} ${nunito.variable}`}>
       <body className="min-h-full flex flex-col">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:bg-purple focus:text-white focus:px-4 focus:py-2 focus:rounded-full focus:font-display focus:font-semibold focus:text-sm"
+        >
+          Skip to content
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Header />
-        <main className="flex-1 pb-[72px] md:pb-0">{children}</main>
+        <main id="main-content" className="flex-1 pb-[72px] md:pb-0">{children}</main>
         <Footer />
         <BottomNav />
       </body>

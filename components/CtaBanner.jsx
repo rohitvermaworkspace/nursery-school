@@ -21,7 +21,7 @@ export default function CtaBanner() {
                 Give your child the best start in life.
               </p>
               <p className="text-sm text-body mt-1">
-                Admissions open for <span className="text-pink font-bold">2026-2027</span>
+                Admissions open for <span className="text-pink-deep font-bold">2026-2027</span>
               </p>
             </div>
           </div>

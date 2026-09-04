@@ -24,7 +24,7 @@ export default function ProgramCards() {
               style={{ backgroundColor: program.color }}
             >
               <h3 className="font-display font-bold text-lg text-center">{program.title}</h3>
-              <p className="text-xs text-center text-white/80 font-semibold mb-4">
+              <p className="text-xs text-center text-white font-semibold mb-4">
                 {program.subtitle}
               </p>
 
@@ -38,15 +38,15 @@ export default function ProgramCards() {
                 />
               </div>
 
-              <p className="text-sm text-white/90 leading-relaxed flex-1 text-center">
+              <p className="text-sm text-white leading-relaxed flex-1 text-center">
                 {program.desc}
               </p>
 
               <Link
                 href={program.href}
-                className="mt-4 inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-all rounded-full py-3 text-sm font-display font-semibold border border-white/20"
+                className="mt-4 inline-flex items-center justify-center gap-2 bg-white/40 hover:bg-white/50 backdrop-blur-sm transition-all rounded-full py-3 text-sm font-display font-semibold border border-white/40"
               >
-                Learn More
+                Learn More About {program.title}
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </article>

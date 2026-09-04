@@ -55,7 +55,7 @@ export default function Hero() {
               href="/about"
               className="inline-flex items-center justify-center gap-2 bg-white text-ink font-display font-semibold px-5 sm:px-7 py-3.5 sm:py-4 rounded-full border-2 border-ink/10 hover:border-purple/30 hover:text-purple transition-all text-sm sm:text-[15px]"
             >
-              Learn More
+              Learn More About LittleSprouts
             </Link>
           </div>
 
@@ -78,7 +78,7 @@ export default function Hero() {
 
           <div className="rounded-[2rem] overflow-hidden aspect-[4/3.3] relative shadow-[0_8px_40px_rgba(123,63,228,0.12)] border-4 border-white">
             <Image
-              src="https://images.unsplash.com/photo-1560785496-3c9d27877182?q=80&w=1000&auto=format&fit=crop"
+              src="/images/teacher-helping.jpg"
               alt="A teacher helping two young children build with colorful blocks"
               fill
               sizes="(min-width: 1024px) 560px, 100vw"

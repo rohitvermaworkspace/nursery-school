@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import { Calendar, ArrowRight } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
 import { newsPosts } from '@/data/content'
 import { buildMetadata } from '@/lib/seo'
@@ -19,7 +18,7 @@ const EXTRA_POSTS = [
     title: 'Building a Reading Corner Kids Actually Use',
     excerpt: 'Simple tips for creating a cozy reading nook that pulls kids in at home.',
     image:
-      'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=700&auto=format&fit=crop',
+      '/images/kids-reading.jpg',
   },
 ]
 
@@ -54,11 +53,7 @@ export default function BlogPage() {
                 <h2 className="font-display font-bold text-lg text-ink mb-2 leading-snug line-clamp-2">
                   {post.title}
                 </h2>
-                <p className="text-sm text-body leading-relaxed mb-5">{post.excerpt}</p>
-                <Link href="/blog" className="inline-flex items-center gap-1.5 text-sm font-display font-semibold text-purple hover:text-purple-deep transition-colors">
-                  Read More
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+                <p className="text-sm text-body leading-relaxed">{post.excerpt}</p>
               </div>
             </article>
           ))}

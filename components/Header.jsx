@@ -24,7 +24,7 @@ export default function Header() {
           </Link>
 
           <div className="flex items-center gap-3 sm:gap-6">
-            <a href={`tel:${SITE.phone}`} className="flex items-center gap-2 sm:gap-3 group">
+            <a href={`tel:${SITE.phone}`} className="flex items-center gap-2 sm:gap-3 group" aria-label={`Call us at ${SITE.phoneDisplay}`}>
               <span className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-purple/10 flex items-center justify-center shrink-0 group-hover:bg-purple/15 transition-colors">
                 <Phone className="w-5 h-5 text-purple" />
               </span>

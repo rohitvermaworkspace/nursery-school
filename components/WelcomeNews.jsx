@@ -18,7 +18,7 @@ export default function WelcomeNews() {
 
           <div className="rounded-[1.75rem] overflow-hidden aspect-[16/10] relative mb-6 shadow-[0_4px_24px_rgba(0,0,0,0.08)] border-3 border-white">
             <Image
-              src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?q=80&w=900&auto=format&fit=crop"
+              src="/images/kids-painting.jpg"
               alt="Children sitting together on a colorful classroom rug"
               fill
               sizes="(min-width: 1024px) 520px, 100vw"
@@ -81,7 +81,7 @@ export default function WelcomeNews() {
                     href="/blog"
                     className="inline-flex items-center gap-1.5 text-sm font-display font-semibold text-purple mt-2 hover:text-purple-deep transition-colors"
                   >
-                    Read More
+                    Read Full Article
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>

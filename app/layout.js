@@ -28,10 +28,10 @@ export const metadata = {
   metadataBase: new URL(SITE.url),
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "48x48" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/nursery-school/favicon.ico", sizes: "48x48" },
+      { url: "/nursery-school/favicon.svg", type: "image/svg+xml" },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: "/nursery-school/apple-touch-icon.png",
   },
   appleWebApp: {
     capable: true,
